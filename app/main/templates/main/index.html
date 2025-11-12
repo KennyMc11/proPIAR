@@ -1,0 +1,232 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proPIAR - Реклама, которая приносит клиентов</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <!-- Навигационное меню -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">proPIAR</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Главная</a></li>
+                <li><a href="#about" class="nav-link">Обо мне</a></li>
+                <li><a href="#services" class="nav-link">Услуги</a></li>
+                <li><a href="#cases" class="nav-link">Кейсы</a></li>
+                <li><a href="#process" class="nav-link">Этапы работы</a></li>
+                <li><a href="#contact" class="nav-link">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Главный экран -->
+    <section id="home" class="section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <!-- Здесь будет ваше фото -->
+                    <img src="{% static 'img/photo_1_1.png' %}" alt="ProPIAR - специалист по контекстной рекламе" class="profile-photo">
+                </div>
+                <div class="hero-text">
+                    <p class="hero-subtitle">Реклама, которая приносит клиентов</p>
+                    <p class="hero-description">proPIAR — это про продвижение, результат, громко и со вкусом.</p>
+                    <div class="cta-form">
+                        <h3>Оставь заявку и получи аудит/консультацию <span class="gold-text">БЕСПЛАТНО</span></h3>
+                        <form class="contact-form">
+                            <input type="text" placeholder="Ваше имя" required>
+                            <input type="tel" placeholder="Ваш телефон" required>
+                            <button type="submit" class="btn-gold">Получить аудит</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="hr-no-shift">
+    <hr class="hr-no-shift2">
+
+    <!-- Услуги -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 class="service-title">START (для новичков)</h3>
+                    <p class="service-price">15 000 рублей, разовый платеж</p>
+                    <p class="service-description">Для тех, кто запускает рекламу впервые.</p>
+                    <ul class="service-features">
+                        <li>Анализ ниши и конкурентов</li>
+                        <li>Подбор ключевых слов</li>
+                        <li>Настройка до 2 кампаний (Поиск + РСЯ)</li>
+                        <li>Настройка целей в аналитике</li>
+                        <li>Передача кампаний с инструкцией</li>
+                    </ul>
+                    <button class="btn-outline">Выбрать пакет</button>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-title">GROWTH (для роста)</h3>
+                    <p class="service-price">20 000 рублей в месяц</p>
+                    <p class="service-description">Бизнесу, которому нужно больше заявок.</p>
+                    <ul class="service-features">
+                        <li>Анализ ниши и конкурентов</li>
+                        <li>Подбор ключевых слов</li>
+                        <li>Ведение до 5 кампаний</li>
+                        <li>Постоянная оптимизация</li>
+                        <li>Регулярная аналитика площадок, отключение неэффективных</li>
+                        <li>Добавление минус-слов</li>
+                        <li>Тесты объявлений</li>
+                        <li>Подробный отчёт 2 раза в месяц</li>
+                    </ul>
+                    <button class="btn-outline">Выбрать пакет</button>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-title">PREMIUM (полное ведение)</h3>
+                    <p class="service-price">От 30 000 рублей в месяц</p>
+                    <p class="service-description">Полное ведение и рост бизнеса.</p>
+                    <ul class="service-features">
+                        <li>Ведение аккаунта без ограничений</li>
+                        <li>A/B тестирование гипотез</li>
+                        <li>Настройка ретаргетинга</li>
+                        <li>Приоритетная поддержка и консультации</li>
+                    </ul>
+                    <button class="btn-outline">Выбрать пакет</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Кто я</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Я занимаюсь настройкой и ведением контекстной рекламы (Яндекс.Директ) для бизнеса уже более 7 лет.</p>
+                    <p>Настраиваю рекламу, которая реально приносит клиентов.</p>
+                    <p>Работаю с бизнесами в любых нишах — от локальных компаний до федеральных брендов.</p>
+                    <p>Главное условие — наличие хорошего сайта, без него реклама не даст нужного результата.</p>
+                    <p>За время работы я настроила рекламу уже более чем для 300 бизнесов.</p>
+                    <p>Среди моих клиентов:</p>
+                    <ul class="clients-list">
+                        <li>ТДСК</li>
+                        <li>Нир-Ванна</li>
+                        <li>Первый гипермаркет мебели</li>
+                        <li>Пицца Экспресс</li>
+                        <li>большинство клиник и стоматологий Тюмени, интернет-магазины, доставки, оптовые компании и многие другие.</li>
+                    </ul>
+                    <p>Опыт — огромный, я прошла все возможные кейсы: от запуска новых брендов с нуля до масштабирования стабильных проектов.</p>
+                    <h3>Как всё происходит:</h3>
+                    <ol class="process-list">
+                        <li>Клиент обращается ко мне.</li>
+                        <li>Я проверяю сайт и понимаю, насколько эффективно можно запустить рекламу.</li>
+                        <li>Отправляю короткий бриф — всего несколько вопросов, чтобы понять, что продвигаем и какие цели.</li>
+                        <li>После согласования — настраиваю рекламу, запускаю кампании и веду их.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Кейсы -->
+    <section id="cases" class="section">
+        <div class="container">
+            <h2 class="section-title">Кейсы</h2>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <h3>Интернет-магазин мебели</h3>
+                    <p>Увеличение конверсии на 45% за 3 месяца</p>
+                    <p>После оптимизации кампаний и внедрения ретаргетинга удалось значительно повысить эффективность рекламы.</p>
+                </div>
+                <div class="case-card">
+                    <h3>Стоматологическая клиника</h3>
+                    <p>Снижение стоимости заявки на 30%</p>
+                    <p>Благодаря точной настройке таргетинга и оптимизации ставок удалось сократить расходы при сохранении количества заявок.</p>
+                </div>
+                <div class="case-card">
+                    <h3>Сеть ресторанов быстрого питания</h3>
+                    <p>Увеличение заказов на 60% в первый месяц</p>
+                    <p>Запуск геолокационного таргетинга и создание привлекательных креативов позволили значительно увеличить поток клиентов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Этапы работы -->
+    <section id="process" class="section">
+        <div class="container">
+            <h2 class="section-title">Этапы работы</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Заявка или бесплатный аудит</h3>
+                    <p>Вы оставляете заявку, и мы проводим бесплатный анализ вашего проекта</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Анализ конкурентов</h3>
+                    <p>Изучаем нишу и определяем наиболее эффективные стратегии продвижения</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Настройка кампаний и креативов</h3>
+                    <p>Создаем и настраиваем рекламные кампании, разрабатываем креативы</p>
+                </div>
+            </div>
+            <div class="process-steps1">
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Запуск и оптимизация</h3>
+                    <p>Запускаем рекламу и постоянно оптимизируем для достижения лучших результатов</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Ежемесячные отчеты и рост заявок</h3>
+                    <p>Предоставляем подробные отчеты и работаем над увеличением количества заявок</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма заявки -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-section">
+                <h2 class="section-title">Хотите увеличить поток заявок из рекламы?</h2>
+                <p class="contact-subtitle">Оставьте контакты - сделаем бесплатный аудит и подберем стратегию под ваш бизнес.</p>
+                <form class="contact-form">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="tel" placeholder="Ваш телефон" required>
+                    <button type="submit" class="btn-gold">Получить аудит бесплатно</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3 class="footer-logo">proPIAR</h3>
+                    <p>Реклама, которая приносит клиентов</p>
+                </div>
+                <div class="footer-contacts">
+                    <p>Телефон: <a href="tel:+79220069499">+7 922 006 9499</a></p>
+                    <p>Телеграм: <a href="https://t.me/propriare" target="_blank">@propriare</a></p>
+                    <p>Instagram: <a href="#" target="_blank">proPIAR</a></p>
+                    <p>VK: <a href="#" target="_blank">proPIAR</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 proPIAR. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
