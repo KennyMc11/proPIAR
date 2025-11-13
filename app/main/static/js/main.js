@@ -22,11 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const navbar = document.getElementById('navbar');
         
         if (window.scrollY > 100) {
-            navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
+            navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
             navbar.style.padding = '10px 0';
         } else {
-            navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
-            navbar.style.padding = '15px 0';
+            navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+            navbar.style.padding = '10px 0';
         }
     });
     
@@ -39,6 +39,22 @@ document.addEventListener('DOMContentLoaded', function() {
             // Здесь можно добавить код для отправки формы
             alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
             form.reset();
+        });
+    });
+});
+
+// Аккордеон с возможностью открытия нескольких элементов
+document.addEventListener('DOMContentLoaded', function() {
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            const accordionContent = this.nextElementSibling;
+            const accordionIcon = this.querySelector('.accordion-icon');
+            
+            // Переключаем только текущий элемент
+            this.classList.toggle('active');
+            accordionContent.classList.toggle('open');
         });
     });
 });

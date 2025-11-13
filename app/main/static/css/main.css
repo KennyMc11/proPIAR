@@ -16,7 +16,7 @@
 
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: var(--black);
+    background: linear-gradient(to left, var(--black) 50%, var(--dark-gray));
     color: var(--white);
     line-height: 1.6;
     scroll-behavior: smooth;
@@ -56,7 +56,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 15px 0;
@@ -117,15 +117,14 @@ body {
     display: flex;
     align-items: center;
     background: linear-gradient(to left, var(--black) 50%, var(--dark-gray));
-    padding-top: 90px;
-    margin-bottom: -115px;
+    padding-top: 20px;
 }
 
 .hero-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
+    gap: 75px;
 }
 
 .hero-text {
@@ -209,8 +208,8 @@ body {
     flex: 1;
     display: flex;
     justify-content: flex-start;
-    padding: 0 100px 0px 0;
-    margin-left: -100px;
+    padding: 0 75px 0px 0;
+    margin-left: -75px;
 }
 
 .hero-image img {
@@ -231,67 +230,339 @@ body {
 }
 
 .hr-no-shift {
-    position:absolute;
+    position: relative;
     height: 1px;
     background: #ffffff;
     border: none;
-    margin: 0;
-    padding: 0;
-    top: 76px; 
-    left: 0; 
-    right: 0;
+    bottom: -11px;
 }
 
 .hr-no-shift2 {
-    position:absolute;
+    position: absolute;
+    left: 0;
+    right: 0;
     height: 1px;
     background: #ffffff;
     border: none;
-    margin: 0;
+    margin: 2px;
     padding: 0;
-    left: 0; 
-    right: 0;
 }
 
 
 /* Обо мне */
 #about {
-    background-color: var(--dark-gray);
     background: linear-gradient(to left, var(--black) 50%, var(--dark-gray));
+    margin-top: 100px;
 }
 
 .about-content {
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
 }
 
-.about-text p {
+/* Основные карточки */
+.about-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.about-card {
+    background-color: var(--dark-gray);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+}
+
+.about-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--gold);
+}
+
+.about-card p {
+    color: var(--light-gray);
+    line-height: 1.6;
+}
+
+.about-card p strong{
+    color: #cecece;
+    line-height: 1.6;
+}
+
+/* Клиенты */
+.clients-section {
+    text-align: center;
+    margin-top: -40px;
+}
+
+.clients-title {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: var(--white);
+    position: relative;
+}
+
+.clients-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: var(--gold);
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+}
+
+.client-item {
+    background-color: var(--dark-gray);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.client-item:hover {
+    transform: translateY(-3px);
+}
+
+.client-logo {
+    font-size: 2rem;
+}
+
+.client-name {
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Процесс работы */
+.process-section {
+    background-color: var(--dark-gray);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.process-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.process-steps-about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+}
+
+.process-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.step-number-about {
+    width: 40px;
+    height: 40px;
+    background-color: var(--gold);
+    color: var(--black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    font-size: 1.2rem;
     margin-bottom: 10px;
+    color: var(--gold);
+}
+
+.step-content p {
+    color: var(--light-gray);
+    line-height: 1.5;
+}
+
+/* Аккордеон процесса работы */
+.accordion {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--medium-gray);
+    background-color: var(--dark-gray);
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.accordion-header:hover {
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+.accordion-header.active {
+    background-color: rgba(212, 175, 55, 0.15);
+}
+
+.step-number-about {
+    width: 40px;
+    height: 40px;
+    background-color: var(--gold);
+    color: var(--black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
     font-size: 1.1rem;
 }
 
-.clients-list {
-    margin: 20px 0;
-    padding-left: 20px;
+.accordion-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    flex: 1;
 }
 
-.clients-list li {
-    margin-bottom: 10px;
+.accordion-icon {
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+    color: var(--gold);
+    flex-shrink: 0;
 }
 
-.process-list {
-    margin: 20px 0;
-    padding-left: 20px;
+.accordion-header.active .accordion-icon {
+    transform: rotate(45deg);
 }
 
-.process-list li {
-    margin-bottom: 10px;
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.2);
 }
+
+.accordion-content.open {
+    max-height: 200px;
+}
+
+.accordion-content p {
+    padding: 15px 25px 25px 80px;
+    margin: 0;
+    color: #ececec;
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+/* Анимация появления контента */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.accordion-content.open p {
+    animation: slideDown 0.3s ease;
+}
+
+/* Экспертиза */
+.expertise-card {
+    background: linear-gradient(135deg, var(--medium-gray) 0%, var(--dark-gray) 100%);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.expertise-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--gold);
+}
+
+.expertise-card p {
+    color: var(--light-gray);
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.expertise-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--gold);
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: var(--light-gray);
+    font-size: 0.9rem;
+}
+
 
 /* Услуги */
 #services {
     background: linear-gradient(to left, var(--black) 50%, var(--dark-gray));
-    margin-top: 20px;
 }
 
 .services-grid {
@@ -301,6 +572,11 @@ body {
 }
 
 .service-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* или min-height: 500px; */
+    position: relative;
     background-color: var(--medium-gray);
     padding: 30px;
     border-radius: 10px;
@@ -337,7 +613,7 @@ body {
 }
 
 .service-features li {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .btn-outline {
@@ -350,6 +626,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     width: 100%;
+    margin-top: auto;
 }
 
 .btn-outline:hover {
@@ -359,7 +636,6 @@ body {
 
 /* Кейсы */
 #cases {
-    background-color: var(--dark-gray);
     background: linear-gradient(to left, var(--black) 50%, var(--dark-gray));
 }
 
@@ -391,7 +667,7 @@ body {
 }
 
 /* Этапы работы */
-#process{
+#process {
     background: linear-gradient(to left, var(--black) 50%, var(--dark-gray));
 }
 
@@ -499,12 +775,12 @@ body {
     }
 
     .hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin-left: 0;
-}
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin-left: 0;
+    }
 
     .hero-content {
         flex-direction: column;
@@ -537,6 +813,61 @@ body {
     .step {
         max-width: 100%;
     }
+
+    /*кто я*/
+    .about-main {
+        grid-template-columns: 1fr;
+    }
+
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-steps-about {
+        grid-template-columns: 1fr;
+    }
+
+    .process-step {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .expertise-stats {
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .process-section {
+        padding: 30px 20px;
+    }
+
+    .about-card {
+        padding: 25px 20px;
+    }
+
+    /*Этапы работы*/
+    .accordion-header {
+        padding: 20px 15px;
+        gap: 15px;
+    }
+    
+    .step-number-about {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    .accordion-title {
+        font-size: 1.1rem;
+    }
+    
+    .accordion-content p {
+        padding: 0 20px 20px 65px;
+    }
 }
 
 @media (max-width: 1024px) and (min-width: 769px) {
@@ -544,8 +875,41 @@ body {
         grid-template-columns: repeat(2, 1fr);
         padding: 0;
     }
+
     .process-steps1 {
         grid-template-columns: repeat(2, 1fr);
         padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .clients-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .expertise-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Этапы работы */
+    .accordion-header {
+        padding: 18px 12px;
+        gap: 12px;
+    }
+    
+    .step-number-about {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+    
+    .accordion-title {
+        font-size: 1rem;
+    }
+    
+    .accordion-content p {
+        padding: 0 15px 15px 55px;
+        font-size: 0.9rem;
     }
 }
