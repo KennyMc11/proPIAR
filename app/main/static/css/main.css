@@ -29,7 +29,7 @@ body {
 }
 
 .section {
-    padding: 100px 0;
+    padding: 0 0;
 }
 
 .section-title {
@@ -118,6 +118,7 @@ body {
     align-items: center;
     background: linear-gradient(to left, var(--black) 50%, var(--dark-gray));
     padding-top: 90px;
+    margin-bottom: -115px;
 }
 
 .hero-content {
@@ -248,7 +249,6 @@ body {
     border: none;
     margin: 0;
     padding: 0;
-    top: 688px; 
     left: 0; 
     right: 0;
 }
@@ -291,6 +291,7 @@ body {
 /* Услуги */
 #services {
     background: linear-gradient(to left, var(--black) 50%, var(--dark-gray));
+    margin-top: 20px;
 }
 
 .services-grid {
