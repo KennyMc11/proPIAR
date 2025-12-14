@@ -42,6 +42,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Кнопки "Выбрать пакет" - прокрутка к контактам
+    const outlineButtons = document.querySelectorAll('.btn-outline');
+    
+    outlineButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const contactSection = document.querySelector('#contact');
+            
+            window.scrollTo({
+                top: contactSection.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        });
+    });
+
     // Мобильное меню (гамбургер)
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
