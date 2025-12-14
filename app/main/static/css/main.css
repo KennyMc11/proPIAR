@@ -647,12 +647,12 @@ body {
 .cases-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    gap: 20px;
 }
 
 .case-card {
     background-color: var(--medium-gray);
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
@@ -668,7 +668,8 @@ body {
 }
 
 .case-card p {
-    margin-bottom: 15px;
+    margin-bottom: 4px;
+    font-size: 15px;
 }
 
 /* Этапы работы */
