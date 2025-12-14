@@ -326,6 +326,7 @@ body {
 
 .clients-title {
     font-size: 1.8rem;
+    margin-top: 30px;
     margin-bottom: 40px;
     color: var(--white);
     position: relative;
@@ -692,6 +693,7 @@ body {
 /* Этапы работы */
 #process {
     background: none;
+    margin-top: 50px;
 }
 
 .process-steps {
