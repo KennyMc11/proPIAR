@@ -16,7 +16,11 @@
 
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background: linear-gradient(to left, var(--black) 50%, var(--dark-gray));
+    background: linear-gradient(to right,
+            var(--dark-gray) 0%,
+            var(--dark-gray) 15%,
+            var(--black) 60%,
+            var(--black) 100%);
     color: var(--white);
     line-height: 1.6;
     scroll-behavior: smooth;
@@ -30,6 +34,7 @@ body {
 
 .section {
     padding: 0 0;
+
 }
 
 .section-title {
@@ -116,7 +121,7 @@ body {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(to left, var(--black) 50%, var(--dark-gray));
+    background: none;
     padding-top: 20px;
 }
 
@@ -251,7 +256,7 @@ body {
 
 /* Обо мне */
 #about {
-    background: linear-gradient(to left, var(--black) 50%, var(--dark-gray));
+    background: none;
     margin-top: 100px;
 }
 
@@ -298,7 +303,7 @@ body {
     line-height: 1.6;
 }
 
-.about-card p strong{
+.about-card p strong {
     color: #cecece;
     line-height: 1.6;
 }
@@ -352,7 +357,7 @@ body {
     font-size: 2rem;
 }
 
-.client-logo img{
+.client-logo img {
     width: 40px;
     height: 40px;
 }
@@ -507,6 +512,7 @@ body {
         opacity: 0;
         transform: translateY(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -567,7 +573,7 @@ body {
 
 /* Услуги */
 #services {
-    background: linear-gradient(to left, var(--black) 50%, var(--dark-gray));
+    background: none;
 }
 
 .services-grid {
@@ -641,7 +647,8 @@ body {
 
 /* Кейсы */
 #cases {
-    background: linear-gradient(to left, var(--black) 50%, var(--dark-gray));
+    background: none;
+    margin-top: 50px;
 }
 
 .cases-grid {
@@ -674,7 +681,7 @@ body {
 
 /* Этапы работы */
 #process {
-    background: linear-gradient(to left, var(--black) 50%, var(--dark-gray));
+    background: none;
 }
 
 .process-steps {
@@ -719,7 +726,7 @@ body {
 
 /* Форма заявки */
 #contact {
-    background: linear-gradient(to left, var(--black) 50%, var(--dark-gray));
+    background: none;
 }
 
 .contact-section {
@@ -860,17 +867,17 @@ body {
         padding: 20px 15px;
         gap: 15px;
     }
-    
+
     .step-number-about {
         width: 35px;
         height: 35px;
         font-size: 1rem;
     }
-    
+
     .accordion-title {
         font-size: 1.1rem;
     }
-    
+
     .accordion-content p {
         padding: 0 20px 20px 65px;
     }
@@ -892,7 +899,7 @@ body {
     .clients-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .expertise-stats {
         flex-direction: column;
         gap: 15px;
@@ -903,17 +910,17 @@ body {
         padding: 18px 12px;
         gap: 12px;
     }
-    
+
     .step-number-about {
         width: 30px;
         height: 30px;
         font-size: 0.9rem;
     }
-    
+
     .accordion-title {
         font-size: 1rem;
     }
-    
+
     .accordion-content p {
         padding: 0 15px 15px 55px;
         font-size: 0.9rem;
