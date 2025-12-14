@@ -738,6 +738,7 @@ body {
 #contact {
     background: none;
     margin-top: 80px;
+    margin-bottom: 40px;
 }
 
 .contact-section {
@@ -762,17 +763,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 40px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid var(--medium-gray);
 }
 
 .footer-logo {
     font-size: 2rem;
     color: var(--gold);
     margin-bottom: 15px;
-}
-
-.footer-contacts p {
-    margin-bottom: 10px;
 }
 
 .footer-contacts a {
