@@ -125,7 +125,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Telegram settings
 TELEGRAM_BOT_TOKEN = "8430844015:AAHuEyW6q0-G68DxOhX3tWPJvc8QWJzeUy0"
-TELEGRAM_CHAT_ID = "409000348"
+TELEGRAM_CHAT_ID = ["409000348", "8083710915"]
 
 # Logging configuration
 LOGGING = {
