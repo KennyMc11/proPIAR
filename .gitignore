@@ -6,6 +6,7 @@ __pycache__
 .vscode
 .idea
 
+TELEGRAM_SETUP.md
 db.sqlite3
 
 # Логи

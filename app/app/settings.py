@@ -122,3 +122,22 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Telegram settings
+TELEGRAM_BOT_TOKEN = "8430844015:AAHuEyW6q0-G68DxOhX3tWPJvc8QWJzeUy0"
+TELEGRAM_CHAT_ID = "409000348"
+
+# Logging configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO',
+    },
+}

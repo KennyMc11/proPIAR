@@ -41,10 +41,12 @@
                     <p class="hero-description">proPIAR — это про продвижение, результат, громко и со вкусом.</p>
                     <div class="cta-form">
                         <h3>Оставь заявку и получи аудит/консультацию <span class="gold-text">БЕСПЛАТНО</span></h3>
-                        <form class="contact-form">
-                            <input type="text" placeholder="Ваше имя" required>
-                            <input type="tel" placeholder="Ваш телефон" required>
+                        <form class="contact-form" id="applicationForm">
+                            {% csrf_token %}
+                            <input type="text" name="name" placeholder="Ваше имя" required>
+                            <input type="tel" name="phone" placeholder="Ваш телефон" required>
                             <button type="submit" class="btn-gold">Получить аудит</button>
+                            <p id="formMessage" style="display: none; margin-top: 10px; text-align: center;"></p>
                         </form>
                     </div>
                 </div>
@@ -81,55 +83,55 @@
                             нужного результата.</p>
                     </div>
                 </div>
-<!-- Услуги -->
-    <section id="services" class="section">
-        <div class="container">
-            <h2 class="section-title">Наши услуги</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3 class="service-title">START (для новичков)</h3>
-                    <p class="service-price">15 000 рублей, разовый платеж</p>
-                    <p class="service-description">Для тех, кто запускает рекламу впервые.</p>
-                    <ul class="service-features">
-                        <li>Анализ ниши и конкурентов</li>
-                        <li>Подбор ключевых слов</li>
-                        <li>Настройка до 2 кампаний (Поиск + РСЯ)</li>
-                        <li>Настройка целей в аналитике</li>
-                        <li>Передача кампаний с инструкцией</li>
-                    </ul>
-                    <button class="btn-outline">Выбрать пакет</button>
-                </div>
-                <div class="service-card">
-                    <h3 class="service-title">GROWTH (для роста)</h3>
-                    <p class="service-price">20 000 рублей в месяц</p>
-                    <p class="service-description">Бизнесу, которому нужно больше заявок.</p>
-                    <ul class="service-features">
-                        <li>Анализ ниши и конкурентов</li>
-                        <li>Подбор ключевых слов</li>
-                        <li>Ведение до 5 кампаний</li>
-                        <li>Постоянная оптимизация</li>
-                        <li>Регулярная аналитика площадок, отключение неэффективных</li>
-                        <li>Добавление минус-слов</li>
-                        <li>Тесты объявлений</li>
-                        <li>Подробный отчёт 2 раза в месяц</li>
-                    </ul>
-                    <button class="btn-outline">Выбрать пакет</button>
-                </div>
-                <div class="service-card">
-                    <h3 class="service-title">PREMIUM (полное ведение)</h3>
-                    <p class="service-price">От 30 000 рублей в месяц</p>
-                    <p class="service-description">Полное ведение и рост бизнеса.</p>
-                    <ul class="service-features">
-                        <li>Ведение аккаунта без ограничений</li>
-                        <li>A/B тестирование гипотез</li>
-                        <li>Настройка ретаргетинга</li>
-                        <li>Приоритетная поддержка и консультации</li>
-                    </ul>
-                    <button class="btn-outline">Выбрать пакет</button>
-                </div>
-            </div>
-        </div>
-    </section>
+                <!-- Услуги -->
+                <section id="services" class="section">
+                    <div class="container">
+                        <h2 class="section-title">Наши услуги</h2>
+                        <div class="services-grid">
+                            <div class="service-card">
+                                <h3 class="service-title">START (для новичков)</h3>
+                                <p class="service-price">15 000 рублей, разовый платеж</p>
+                                <p class="service-description">Для тех, кто запускает рекламу впервые.</p>
+                                <ul class="service-features">
+                                    <li>Анализ ниши и конкурентов</li>
+                                    <li>Подбор ключевых слов</li>
+                                    <li>Настройка до 2 кампаний (Поиск + РСЯ)</li>
+                                    <li>Настройка целей в аналитике</li>
+                                    <li>Передача кампаний с инструкцией</li>
+                                </ul>
+                                <button class="btn-outline">Выбрать пакет</button>
+                            </div>
+                            <div class="service-card">
+                                <h3 class="service-title">GROWTH (для роста)</h3>
+                                <p class="service-price">20 000 рублей в месяц</p>
+                                <p class="service-description">Бизнесу, которому нужно больше заявок.</p>
+                                <ul class="service-features">
+                                    <li>Анализ ниши и конкурентов</li>
+                                    <li>Подбор ключевых слов</li>
+                                    <li>Ведение до 5 кампаний</li>
+                                    <li>Постоянная оптимизация</li>
+                                    <li>Регулярная аналитика площадок, отключение неэффективных</li>
+                                    <li>Добавление минус-слов</li>
+                                    <li>Тесты объявлений</li>
+                                    <li>Подробный отчёт 2 раза в месяц</li>
+                                </ul>
+                                <button class="btn-outline">Выбрать пакет</button>
+                            </div>
+                            <div class="service-card">
+                                <h3 class="service-title">PREMIUM (полное ведение)</h3>
+                                <p class="service-price">От 30 000 рублей в месяц</p>
+                                <p class="service-description">Полное ведение и рост бизнеса.</p>
+                                <ul class="service-features">
+                                    <li>Ведение аккаунта без ограничений</li>
+                                    <li>A/B тестирование гипотез</li>
+                                    <li>Настройка ретаргетинга</li>
+                                    <li>Приоритетная поддержка и консультации</li>
+                                </ul>
+                                <button class="btn-outline">Выбрать пакет</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 <!-- Известные клиенты -->
                 <div class="clients-section">
                     <h3 class="clients-title">Среди моих клиентов</h3>
@@ -327,10 +329,12 @@
                 <h2 class="section-title">Хотите увеличить поток заявок из рекламы?</h2>
                 <p class="contact-subtitle">Оставьте контакты - сделаем бесплатный аудит и подберем стратегию под ваш
                     бизнес.</p>
-                <form class="contact-form">
-                    <input type="text" placeholder="Ваше имя" required>
-                    <input type="tel" placeholder="Ваш телефон" required>
-                    <button type="submit" class="btn-gold">Получить аудит бесплатно</button>
+                <form class="contact-form" id="applicationForm">
+                    {% csrf_token %}
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                    <button type="submit" class="btn-gold">Получить аудит</button>
+                    <p id="formMessage" style="display: none; margin-top: 10px; text-align: center;"></p>
                 </form>
             </div>
         </div>

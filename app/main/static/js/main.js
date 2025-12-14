@@ -36,9 +36,46 @@ document.addEventListener('DOMContentLoaded', function() {
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Здесь можно добавить код для отправки формы
-            alert('Спасибо за заявку! Мы свяжемся с вами в ближайшее время.');
-            form.reset();
+            
+            const formData = new FormData(this);
+            const messageElement = document.getElementById('formMessage');
+            const submitButton = this.querySelector('button[type="submit"]');
+            
+            // Отключаем кнопку во время отправки
+            submitButton.disabled = true;
+            submitButton.style.opacity = '0.6';
+            
+            fetch('/submit-application/', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                messageElement.style.display = 'block';
+                
+                if (data.success) {
+                    messageElement.style.color = '#28a745';
+                    messageElement.textContent = data.message;
+                    form.reset();
+                } else {
+                    messageElement.style.color = '#dc3545';
+                    messageElement.textContent = data.message;
+                }
+            })
+            .catch(error => {
+                messageElement.style.display = 'block';
+                messageElement.style.color = '#dc3545';
+                messageElement.textContent = 'Ошибка при отправке заявки. Попробуйте позже.';
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                // Включаем кнопку обратно
+                submitButton.disabled = false;
+                submitButton.style.opacity = '1';
+            });
         });
     });
 
