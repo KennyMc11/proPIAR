@@ -160,6 +160,10 @@ body {
     padding: 0 0 10px 0;
 }
 
+.hero-subtitle-mob{
+    display: none;
+}
+
 .hero-description {
     font-size: 1.5rem;
     margin-bottom: 35px;
@@ -802,6 +806,10 @@ body {
         overflow-x: hidden;
     }
 
+    .container {
+        padding: 0 15px;
+    }
+
     .nav-menu {
         display: none;
         position: absolute;
@@ -834,16 +842,19 @@ body {
     }
 
     .hero-content {
-        display:contents;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
     }
 
     .hero-image {
-        margin-top: 45px;
+        margin-top: -50px;
         flex: 1;
         display: flex;
         justify-content: center;
-        padding: 0 20px;
-        margin-left: 0;
+        padding: 0;
+        margin-left: 0 !important;
+        width: 100%;
     }
 
     .hero-image img {
@@ -864,6 +875,18 @@ body {
     .hero-subtitle {
         margin-bottom: 0px;
         line-height: 1.2;
+        display: none;
+    }
+
+    .hero-subtitle-mob {
+        font-size: 1.5rem;
+        margin-bottom: 0px;
+        color: var(--white);
+        padding: 20px 0 0 10px;
+    }
+
+    .hero-description {
+        display: none;
     }
 
     .hero-text {
@@ -977,6 +1000,14 @@ body {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .hero-content{
+        gap: 0px;
+    }
+
     .clients-grid {
         grid-template-columns: 1fr;
     }
@@ -984,6 +1015,46 @@ body {
     .expertise-stats {
         flex-direction: column;
         gap: 15px;
+    }
+
+    .hero-subtitle-mob {
+        font-size: 1.5rem;
+        padding: 15px 0 0 20px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-image {
+        transform: scale(0.8);
+        margin-top: -100px;
+        padding: 0 !important;
+        margin-bottom: -43px !important;
+
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .cta-form {
+        padding: 20px;
+    }
+
+    .cta-form h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact-form input {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .btn-gold {
+        padding: 12px 15px;
+        font-size: 0.95rem;
     }
 
     /* Этапы работы */
@@ -1005,5 +1076,95 @@ body {
     .accordion-content p {
         padding: 0 15px 15px 55px;
         font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .nav-container {
+        padding: 0 10px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle-mob {
+        font-size: 1rem;
+        padding: 10px 0 0 0;
+    }
+
+    .cta-form {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .cta-form h3 {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .contact-form {
+        gap: 10px;
+    }
+
+    .contact-form input,
+    .btn-gold {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+    }
+
+    .about-card {
+        padding: 15px 10px;
+    }
+
+    .about-icon {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .service-card {
+        padding: 15px 10px;
+    }
+
+    .service-title {
+        font-size: 1.3rem;
+    }
+
+    .process-section {
+        padding: 20px 10px;
+    }
+
+    .accordion-header {
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    .step-number-about {
+        width: 28px;
+        height: 28px;
+        font-size: 0.85rem;
+    }
+
+    .accordion-title {
+        font-size: 0.95rem;
+    }
+
+    .accordion-content p {
+        padding: 0 10px 15px 50px;
+        font-size: 0.85rem;
     }
 }
