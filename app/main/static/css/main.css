@@ -879,11 +879,11 @@ body {
     }
 
     .hero-subtitle-mob {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         margin-bottom: 0px;
         color: var(--white);
-        padding: 20px 0 0 10px;
-        display: contents;
+        padding: 40px 0 0 10px;
+        display: block;
     }
 
     .hero-description {
@@ -1019,9 +1019,10 @@ body {
     }
 
     .hero-subtitle-mob {
-        font-size: 1.5rem;
-        padding: 15px 0 0 20px;
-        display: contents;
+        font-size: 1.7rem;
+        padding: 40px 0 0 20px;
+        margin-left: 30px;
+        display: block;
     }
 
     .hero-title {
@@ -1100,9 +1101,9 @@ body {
     }
 
     .hero-subtitle-mob {
-        font-size: 1rem;
-        padding: 10px 0 0 0;
-        display: contents;
+        font-size: 1.5rem;
+        padding: 40px 0 0 0;
+        display: block;
     }
 
     .cta-form {
