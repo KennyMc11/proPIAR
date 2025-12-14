@@ -128,7 +128,7 @@ body {
 
 /* Главный экран */
 #home {
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     background: none;
