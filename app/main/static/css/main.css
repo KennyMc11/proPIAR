@@ -34,6 +34,7 @@ body {
 
 .section {
     padding: 0 0;
+    background: transparent;
 
 }
 
@@ -81,6 +82,15 @@ body {
     font-size: 1.8rem;
     font-weight: bold;
     color: var(--gold);
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 1.6rem;
+    cursor: pointer;
 }
 
 .nav-menu {
@@ -369,7 +379,7 @@ body {
 
 /* Процесс работы */
 .process-section {
-    background-color: var(--dark-gray);
+    background-color: transparent;
     padding: 40px;
     border-radius: 10px;
 }
@@ -743,7 +753,7 @@ body {
 
 /* Футер */
 #footer {
-    background-color: var(--black);
+    background-color: transparent;
     padding: 50px 0 20px;
 }
 
@@ -783,21 +793,62 @@ body {
 
 /* Адаптивность */
 @media (max-width: 768px) {
-    .nav-menu {
-        display: none;
+
+    /* ensure full-width layout on small screens */
+    body {
+        width: 100%;
+        overflow-x: hidden;
     }
 
-    .hero-image {
-        flex: 1;
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.85);
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 20px 20px 20px;
+        z-index: 999;
+    }
+
+    .nav-menu.open {
         display: flex;
-        justify-content: center;
-        padding: 0;
-        margin-left: 0;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+        padding: 10px 8px;
+        font-size: 1.05rem;
+    }
+
+    #home {
+        overflow-x: hidden;
     }
 
     .hero-content {
-        flex-direction: column;
-        text-align: center;
+        display:contents;
+    }
+
+    .hero-image {
+        margin-top: 45px;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+        margin-left: 0;
+    }
+
+    .hero-image img {
+        max-width: 280px;
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
     .hero-title {
@@ -808,6 +859,20 @@ body {
         font-size: 2rem;
     }
 
+    .hero-subtitle {
+        margin-bottom: 0px;
+        line-height: 1.2;
+    }
+
+    .hero-text {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .cta-form {
+        max-width: 100%;
+    }
+
     .footer-content {
         flex-direction: column;
         gap: 30px;
@@ -815,19 +880,24 @@ body {
 
     .process-steps {
         grid-template-columns: 1fr;
-        padding: 0;
+        padding: 0 20px;
     }
 
     .process-steps1 {
         grid-template-columns: 1fr;
-        padding: 0;
+        padding: 0 20px;
     }
 
     .step {
         max-width: 100%;
+        padding: 15px 10px;
     }
 
     /*кто я*/
+    #about {
+        margin-top: 10px;
+    }
+
     .about-main {
         grid-template-columns: 1fr;
     }
@@ -856,10 +926,19 @@ body {
 
     .process-section {
         padding: 30px 20px;
+        margin: 0;
     }
 
     .about-card {
-        padding: 25px 20px;
+        padding: 20px 15px;
+    }
+
+    .service-card {
+        padding: 20px 15px;
+    }
+
+    .case-card {
+        padding: 15px 10px;
     }
 
     /*Этапы работы*/

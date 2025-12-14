@@ -41,6 +41,27 @@ document.addEventListener('DOMContentLoaded', function() {
             form.reset();
         });
     });
+
+    // Мобильное меню (гамбургер)
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('open');
+            this.classList.toggle('active');
+        });
+
+        // Закрывать меню при клике на ссылку
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                if (navMenu.classList.contains('open')) {
+                    navMenu.classList.remove('open');
+                    navToggle.classList.remove('active');
+                }
+            });
+        });
+    }
 });
 
 // Аккордеон с возможностью открытия нескольких элементов
