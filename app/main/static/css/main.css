@@ -883,6 +883,7 @@ body {
         margin-bottom: 0px;
         color: var(--white);
         padding: 20px 0 0 10px;
+        display: contents;
     }
 
     .hero-description {
@@ -1020,6 +1021,7 @@ body {
     .hero-subtitle-mob {
         font-size: 1.5rem;
         padding: 15px 0 0 20px;
+        display: contents;
     }
 
     .hero-title {
@@ -1100,6 +1102,7 @@ body {
     .hero-subtitle-mob {
         font-size: 1rem;
         padding: 10px 0 0 0;
+        display: contents;
     }
 
     .cta-form {
