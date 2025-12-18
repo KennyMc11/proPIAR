@@ -128,6 +128,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Переключаем только текущий элемент
             this.classList.toggle('active');
             accordionContent.classList.toggle('open');
+            
+            // Динамически устанавливаем высоту
+            if (accordionContent.classList.contains('open')) {
+                accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+            } else {
+                accordionContent.style.maxHeight = '0';
+            }
         });
     });
 });
